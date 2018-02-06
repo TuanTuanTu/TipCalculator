@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TipCalculator</string>
+    <string name="textview_bill_amount">Bill Amount:</string>
+    <string name="textview_tip_percent">Tip Percent (%):</string>
+    <string name="textview_no_of_people">No. of People:</string>
+    <string name="textview_tip_amount">Tip Amount:</string>
+    <string name="textview_total_amount">Total Amount:</string>
+    <string name="textview_each_person_pays">Each Person Pays:</string>
+    <string name="menu_settings">Settings</string>
 </resources>
