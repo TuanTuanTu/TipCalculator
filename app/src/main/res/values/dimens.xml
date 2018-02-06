@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="constrain_margin">10dp</dimen>
+    <dimen name="edit_text_margin">35dp</dimen>
+    <dimen name="text_tip_width">150dp</dimen>
+    <dimen name="text_tip_height">25dp</dimen>
+    <dimen name="edit_tip_width">80dp</dimen>
+    <dimen name="edit_tip_height">25dp</dimen>
+    <dimen name="edit_margin_from_tip">15dp</dimen>
+    <dimen name="img_plus_minus_wh">25dp</dimen>
+</resources>

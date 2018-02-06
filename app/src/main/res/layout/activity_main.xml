@@ -1,18 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/constrain_margin"
     tools:context="com.training.vungoctuan.tipcalculator.MainActivity">
 
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/txtBillAmount"
+        android:layout_width="@dimen/text_tip_width"
+        android:layout_height="@dimen/text_tip_height"
+        android:text="@string/textview_bill_amount" />
+
+    <EditText
+        android:id="@+id/etBillAmount"
+        android:layout_width="@dimen/edit_tip_width"
+        android:layout_height="@dimen/edit_tip_height"
+        android:layout_marginLeft="@dimen/edit_text_margin"
+        android:background="@android:color/darker_gray"
+        android:text="0"
+        android:textAlignment="viewEnd"
+        app:layout_constraintStart_toEndOf="@+id/txtBillAmount" />
+
+    <TextView
+        android:id="@+id/txtTipPercent"
+        android:layout_width="@dimen/text_tip_width"
+        android:layout_height="@dimen/text_tip_height"
+        android:layout_marginTop="@dimen/constrain_margin"
+        android:text="@string/textview_tip_percent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBillAmount" />
+
+    <EditText
+        android:id="@+id/etTipPercent"
+        android:layout_width="@dimen/edit_tip_width"
+        android:layout_height="@dimen/edit_tip_height"
+        android:layout_marginLeft="@dimen/edit_text_margin"
+        android:layout_marginTop="@dimen/constrain_margin"
+        android:background="@android:color/darker_gray"
+        android:text="0"
+        android:textAlignment="viewEnd"
+        app:layout_constraintStart_toEndOf="@id/txtTipPercent"
+        app:layout_constraintTop_toBottomOf="@+id/etBillAmount" />
+
+
+    <TextView
+        android:id="@+id/txtNoOfPeople"
+        android:layout_width="@dimen/text_tip_width"
+        android:layout_height="@dimen/text_tip_height"
+        android:layout_marginTop="@dimen/constrain_margin"
+        android:text="@string/textview_no_of_people"
+        app:layout_constraintTop_toBottomOf="@+id/txtTipPercent" />
+
+    <EditText
+        android:id="@+id/etNoOfPeople"
+        android:layout_width="@dimen/edit_tip_width"
+        android:layout_height="@dimen/edit_tip_height"
+        android:layout_marginLeft="@dimen/edit_text_margin"
+        android:layout_marginTop="@dimen/constrain_margin"
+        android:background="@android:color/darker_gray"
+        android:text="0"
+        android:textAlignment="viewEnd"
+        app:layout_constraintStart_toEndOf="@id/txtTipPercent"
+        app:layout_constraintTop_toBottomOf="@+id/etTipPercent" />
+
+    <TextView
+        android:id="@+id/txtTipAmount"
+        android:layout_width="@dimen/text_tip_width"
+        android:layout_height="@dimen/text_tip_height"
+        android:layout_marginTop="@dimen/constrain_margin"
+        android:text="@string/textview_tip_amount"
+        app:layout_constraintTop_toBottomOf="@+id/txtNoOfPeople" />
+
+    <EditText
+        android:id="@+id/etTipAmount"
+        android:layout_width="@dimen/edit_tip_width"
+        android:layout_height="@dimen/edit_tip_height"
+        android:layout_marginLeft="@dimen/edit_text_margin"
+        android:layout_marginTop="@dimen/constrain_margin"
+        android:background="@android:color/darker_gray"
+        android:text="0"
+        android:textAlignment="viewEnd"
+        app:layout_constraintStart_toEndOf="@id/txtTipPercent"
+        app:layout_constraintTop_toBottomOf="@+id/etNoOfPeople" />
+
+    <TextView
+        android:id="@+id/txtTotalAmount"
+        android:layout_width="@dimen/text_tip_width"
+        android:layout_height="@dimen/text_tip_height"
+        android:layout_marginTop="@dimen/constrain_margin"
+        android:text="@string/textview_total_amount"
+        app:layout_constraintTop_toBottomOf="@+id/txtTipAmount" />
+
+    <EditText
+        android:id="@+id/etTotalAmount"
+        android:layout_width="@dimen/edit_tip_width"
+        android:layout_height="@dimen/edit_tip_height"
+        android:layout_marginLeft="@dimen/edit_text_margin"
+        android:layout_marginTop="@dimen/constrain_margin"
+        android:background="@android:color/darker_gray"
+        android:text="0"
+        android:textAlignment="viewEnd"
+        app:layout_constraintStart_toEndOf="@id/txtTipPercent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTipAmount" />
+
+    <TextView
+        android:id="@+id/txtEachPersonPays"
+        android:layout_width="@dimen/text_tip_width"
+        android:layout_height="@dimen/text_tip_height"
+        android:layout_marginTop="@dimen/constrain_margin"
+        android:text="@string/textview_each_person_pays"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalAmount" />
+
+    <ImageView
+        android:id="@+id/imgMinus"
+        android:layout_width="@dimen/img_plus_minus_wh"
+        android:layout_height="@dimen/img_plus_minus_wh"
+        android:src="@drawable/minus"
+        app:layout_constraintStart_toEndOf="@id/txtEachPersonPays"
+        app:layout_constraintTop_toTopOf="@+id/txtEachPersonPays"/>
+
+    <EditText
+        android:id="@+id/etEachPersonPays"
+        android:layout_width="@dimen/edit_tip_width"
+        android:layout_height="@dimen/edit_tip_height"
+        android:layout_marginLeft="@dimen/constrain_margin"
+        android:background="@android:color/darker_gray"
+        android:text="0"
+        android:textAlignment="viewEnd"
+        app:layout_constraintStart_toEndOf="@id/imgMinus"
+        app:layout_constraintTop_toTopOf="@+id/txtEachPersonPays" />
+
+    <ImageView
+        android:id="@+id/imgPlus"
+        android:layout_width="@dimen/img_plus_minus_wh"
+        android:layout_height="@dimen/img_plus_minus_wh"
+        android:src="@drawable/plus"
+        android:layout_marginLeft="@dimen/constrain_margin"
+        app:layout_constraintStart_toEndOf="@id/etEachPersonPays"
+        app:layout_constraintTop_toTopOf="@+id/etEachPersonPays"/>
 
 </android.support.constraint.ConstraintLayout>
